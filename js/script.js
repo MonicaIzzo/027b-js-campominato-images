@@ -47,6 +47,7 @@ const grid = document.getElementById("grid");
 const playGame = document.getElementById("playGame");
 const levelSelect = document.getElementById("livello");
 const scorePlacehoder = document.getElementById("score");
+const introPlacehoder = document.getElementById("intro");
 
 
 
@@ -62,8 +63,7 @@ const startGame = () => {
   const createSquare = (cellNumber) => {
     const cell = document.createElement("div");
     cell.classList.add("square");
-    cell.append(cellNumber);
-
+    
     return cell;
   };
   
@@ -76,7 +76,7 @@ const startGame = () => {
     for (let i = 0; i < cells.length; i++) {
       const cell = cells[i];
       cell.classList.add("hover");
-      const cellNumber = parseInt(cell.innerText);
+      const cellNumber = parseInt(i);
       if (bombs.includes(cellNumber)) cell.classList.add("bombs");
     }
   };
@@ -101,7 +101,6 @@ const startGame = () => {
       ? `Hai perso! Hai totalizzato ${score} punti.`
       : `Hai vinto! Hai totalizzato ${score} punti.`;
 
-    alert(message);
     isGameOver = true;
 
     // Riveliamo tutte le celle
@@ -113,6 +112,9 @@ const startGame = () => {
 
   // Svuoto la pagina
   grid.innerHTML = "";
+
+  // Setto il messaggio di endGame a vuoto
+  message = '';
 
   // Recupero il livello scelto
   const level = levelSelect.value;

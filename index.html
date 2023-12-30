@@ -32,24 +32,29 @@
       </div>
       <!-- BOTTONE -->
       <div class="col-4 text-end">
-        <div class="mt-1 mb-1">Seleziona un livello di difficoltà e clicca su "Play"!:</div>
-        <select id="livello" class="w-75 mt-2 mb-2">
-          <option value="easy">Facile</option>
-          <option value="normal">Normale</option>
-          <option value="hard">Alta</option>
+        <div class="mt-1 mb-1">Livelli di difficoltà:</div>
+        <select id="livello" class="w-50 mt-2 mb-2">
+          <option value="easy">Easy</option>
+          <option value="normal">Normal</option>
+          <option value="hard">Hard</option>
         </select>
-        <h4 class="mt-2 mb-2"><!-- <span id="endGame"><strong>Hai perso!</strong></span>E --> Punti totalizzati: <span
-            id="score">0</span></h4>
+        <h4 class="mt-2 mb-2 text-dark"><span id="endGame" class="text-danger"><strong></strong></span>Punti
+          totalizzati: <span id="score" class="text-dark">0</span></h4>
       </div>
       <div class="col-1 text-end">
-        <button class="bg-" id="playGame">Play</button>
+        <button class="bg-success" id="playGame">Play</button>
       </div>
     </div>
     <!-- VITTORIA O PERDIDA -->
   </div>
   <!-- Campo minato -->
-  <div class="container text-center bg-success text-white p-5 mx-auto">
-    <div class="row d-flex flex-wrap p-0 mx-auto gx-0" id="grid"></div>
+  <div class="container text-center bg-success text-white p-5 mx-auto d-flex">
+    <div class="border-int mx-auto">
+      <div class="row d-flex flex-wrap mx-auto gx-0" id="grid">
+        <h1 class="m-2 p-2 fs-3 text-center text-white" id="intro">Seleziona un livello di difficoltà e clicca su
+          "Play".</h1>
+      </div>
+    </div>
   </div>
   <!-- fotter -->
   <footer class="container mt-2 mb-2 p-0">

@@ -65,13 +65,24 @@ button {
 
 button:hover {
   background-color: white;
-  border: 2px solid #418458;
   color: #418458;
 }
 
 #grid {
   width: 800px;
-  padding: 0;
+  border-top: 10px solid #1c452a;
+  border-left: 10px solid #1c452a;
+  border-bottom: 10px solid white;
+  border-right: 10px solid white;
+  padding: 22px;
+}
+
+.border-int {
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+  border-bottom: 10px solid #1c452a;
+  border-right: 10px solid #1c452a;
+  padding: 20px;
 }
 
 .col {
@@ -80,24 +91,35 @@ button:hover {
 
 .square {
   display: inline-block;
-  border: 2px solid white;
-  color: white;
+  border-top: 6px solid white;
+  border-left: 6px solid white;
+  border-bottom: 6px solid #1c452a;
+  border-right: 6px solid #1c452a;
+  color: #418458;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
   margin: 0;
   cursor: pointer;
-  width: calc(800px / var(--cols));
-  height: calc(800px / var(--cols));
+  width: calc(735px / var(--cols));
+  height: calc(735px / var(--cols));
   line-height: 76px;
 }
 
 .square.hover {
-  background-color: aqua;
+  background-color: #1e482d;
+  border: 2px solid #0f2516;
   cursor: none;
 }
 
 .square.hover.bombs {
   background-color: red;
+  background-image: url("../img/pngegg.png");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   cursor: none;
 }
