@@ -109,6 +109,13 @@ button:hover {
 .square.hover {
   background-color: #1e482d;
   border: 2px solid #0f2516;
+  background-image: url("../img/fiorellino.svg");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   cursor: none;
 }
 
